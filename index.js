@@ -1,7 +1,11 @@
 var assert = require('assert')
 
-var cache = window.__shared_component = window.__shared_component || {}
-var handlers = window.__shared_component_handlers = window.__shared_component_handlers || {}
+var glob = typeof window === 'undefined'
+  ? eval('global') // eslint-disable-line no-eval
+  : window
+
+var cache = glob.__shared_component = glob.__shared_component || {}
+var handlers = glob.__shared_component_handlers = glob.__shared_component_handlers || {}
 
 exports.oncreate = function (name, cb) {
   assert.equal(typeof name, 'string', 'shared-component: name should be type string')
