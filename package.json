@@ -2,7 +2,7 @@
   "name": "shared-component",
   "description": "Share a component instance inside a window context",
   "repository": "yoshuawuyts/shared-component",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "scripts": {
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
     "start": "node .",
