@@ -21,7 +21,7 @@ exports.create = function (name, fn) {
   var handler = handlers[name]
   assert.ok(handler, 'shared-component: no registered handler found for ' + name)
 
-  element = handler(fn)
+  element = handler(fn, name)
   assert.ok(element, 'shared-component: no element returned from the handler for ' + name)
 
   cache[name] = element
