@@ -8,6 +8,8 @@ var cache = glob.__shared_component = glob.__shared_component || {}
 var handlers = glob.__shared_component_handlers = glob.__shared_component_handlers || {}
 
 exports.oncreate = function (name, cb) {
+  cb = cb || dft
+
   assert.equal(typeof name, 'string', 'shared-component: name should be type string')
   assert.equal(typeof cb, 'function', 'shared-component: cb should be type function')
 
@@ -26,4 +28,8 @@ exports.create = function (name, fn) {
 
   cache[name] = element
   return element
+}
+
+function dft (fn, name) {
+  fn(name)
 }

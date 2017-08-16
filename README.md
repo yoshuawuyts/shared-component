@@ -28,11 +28,11 @@ function createHeader () {
 ```
 
 ## API
-### `shared.oncreate(name, cb(createComponent))`
+### `shared.oncreate(name, [cb(create, name)])`
 Handle the creation of a new component. Only called the first time
 `shared.create(name, create)` is called with the matching `name`.
 
-### `component = shared.create(name, createComponent)`
+### `component = shared.create(name, create)`
 Create a component instance. If it's the first time that a component is created
 it calls the corresponding `shared.oncreate(name, cb)` method. Will return the
 initialized component on all subsequent calls.
