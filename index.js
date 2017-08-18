@@ -31,5 +31,5 @@ exports.create = function (name, fn) {
 }
 
 function dft (fn, name) {
-  fn(name)
+  return fn(name)
 }
