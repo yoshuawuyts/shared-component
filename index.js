@@ -30,6 +30,6 @@ exports.create = function (name, fn) {
   return element
 }
 
-function dft (fn, name) {
-  return fn(name)
+function dft (Fn, name) {
+  return new Fn(name)
 }
